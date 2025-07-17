@@ -1,117 +1,135 @@
-/* 기본 리셋 */
+/* ===============================
+   기본 초기화 및 공통 설정
+   =============================== */
 * {
-  margin: 0; /* 모든 요소의 바깥 여백 제거 */
-  padding: 0; /* 모든 요소의 안쪽 여백 제거 */
+  margin: 0;              /* 모든 요소의 바깥 여백 제거 */
+  padding: 0;             /* 모든 요소의 안쪽 여백 제거 */
   box-sizing: border-box; /* width 계산 시 padding, border 포함되도록 설정 */
 }
 
 body, html {
-  font-family: 'Pretendard', sans-serif; /* 기본 글꼴을 Pretendard로 설정 (없으면 sans-serif) */
-  color: #fff; /* 전체 글자색 흰색 */
-  height: 100%; /* body와 html 높이를 전체 화면으로 설정 */
+  font-family: 'Pretendard', sans-serif; /* 전체 폰트를 Pretendard로 설정, 없을 경우 sans-serif */
+  color: #fff;                           /* 기본 글자색은 흰색 */
+  height: 100%;                          /* 전체 높이 설정 */
+  scroll-behavior: smooth;               /* 스크롤을 부드럽게 이동하게 설정 */
 }
 
-/* 네비게이션 바 */
+
+/* ===============================
+   상단 네비게이션 바
+   =============================== */
 .navbar {
-  position: fixed; /* 페이지 상단에 고정 */
-  top: 0; /* 화면 위에서 0px (완전히 상단에 붙음) */
-  width: 100%; /* 화면 전체 너비 */
-  padding: 1rem 2rem; /* 위아래 1rem(16px), 좌우 2rem(32px) */
-  background-color: white; /* 배경 흰색 */
-  display: flex; /* 내부 요소를 가로 정렬 */
-  justify-content: space-between; /* 좌우 요소(로고/메뉴 아이콘)를 양끝에 배치 */
-  align-items: center; /* 세로 가운데 정렬 */
-  z-index: 1000; /* 다른 요소보다 위에 보이도록 설정 */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 아래쪽에 은은한 그림자 */
+  position: fixed;               /* 화면 상단에 고정 */
+  top: 0;                        /* 상단에서 0px 위치 */
+  width: 100%;                  /* 너비는 전체 화면 */
+  padding: 1rem 2rem;           /* 상하 1rem, 좌우 2rem의 패딩 */
+  background-color: white;      /* 배경색은 흰색 */
+  display: flex;                /* 내부 요소 가로 배치 */
+  justify-content: space-between; /* 좌우 끝으로 요소 정렬 */
+  align-items: center;          /* 세로 정렬은 가운데 */
+  z-index: 1000;                /* 다른 요소보다 위에 오도록 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 아래쪽 그림자 효과 */
 }
 
 .logo {
-  font-weight: 700; /* 굵은 글씨 */
-  font-size: 1.2rem; /* 글자 크기 = 1.2 * 16px = 약 19.2px */
-  color: #333; /* 진한 회색 (글자색) */
+  font-weight: 700;   /* 굵은 글씨 */
+  font-size: 1.2rem;  /* 글자 크기 1.2배 (약 19px) */
+  color: #333;        /* 짙은 회색 글자색 */
 }
 
 .menu-icon {
-  font-size: 1.5rem; /* 아이콘 크기 = 1.5 * 16px = 24px */
-  color: #333; /* 진한 회색 */
+  font-size: 1.5rem;  /* 아이콘 크기 (약 24px) */
+  color: #333;        /* 짙은 회색 */
 }
 
-/* Hero 영역 */
+
+/* ===============================
+   Hero 영역 (사진 + 텍스트)
+   =============================== */
 .hero {
-  height: 100vh; /* hero 영역의 높이를 400px로 고정 (이미지 크기) */
-  background-image: url('images/background.jpg'); /* 배경 이미지 경로 */
-  background-size: cover; /* 이미지를 요소에 꽉 채우되 비율 유지 */
-  background-position: center; /* 이미지 가운데 정렬 */
-  position: relative; /* 안쪽에 absolute 요소 기준 잡기 위해 설정 */
+  position: relative;        /* 내부의 절대 위치 요소 기준 */
+  width: 100%;               /* 전체 너비 */
+  height: auto;              /* 높이는 내용에 맞게 자동 */
 }
 
-.overlay {
-  position: absolute; /* .hero 기준으로 절대 위치 */
-  top: 0; /* 위에서 0px */
-  left: 0; /* 왼쪽에서 0px */
-  width: 100%; /* .hero 전체 너비와 동일 */
-  height: 100%; /* .hero 전체 높이와 동일 */
-  background-color: rgba(0,0,0,0.5); /* 반투명 검은 배경 (50%) */
-  display: flex; /* 안의 텍스트/버튼 정렬을 위해 flex 사용 */
-  flex-direction: column; /* 세로 방향 정렬 */
-  justify-content: flex-start; /* 위쪽에서부터 정렬 시작 */
-  align-items: center; /* 가운데 정렬 (가로 기준) */
-  text-align: center; /* 텍스트 가운데 정렬 */
-  padding: 4rem 2rem 2rem 2rem; 
-  /* 상단 4rem(64px), 좌우 2rem(32px), 하단 2rem(32px) 
-     → 상단 여백이 더 커서 글씨들이 아래로 밀려 보임 */
+/* 배경 이미지 (사진) */
+.hero-img {
+  width: 100%;               /* 너비는 꽉 차게 */
+  height: auto;              /* 높이는 비율 유지 */
+  display: block;            /* 여백 제거를 위한 블록 처리 */
 }
 
-.hero h1 {
-  font-size: 3rem; /* 제목 크기 = 2 * 16px = 32px */
-  font-weight: 1500; /* 아주 굵은 글씨 */
-  line-height: 1.5; /* 줄 간격: 글자 크기의 1.5배 */
-  margin-bottom: 1rem; /* 아래쪽 여백 32px */
-  margin-top: 2rem;        /* ↑ 위쪽 여백: h1을 아래로 밀어내기 위해 추가 */
-  font-family: 'Jua', sans-serif;
+/* 이미지 위 텍스트 박스 */
+.text-box {
+  position: absolute;        /* .hero 기준으로 절대 위치 */
+  top: 0;                    /* 위에서 0px */
+  left: 0;                   /* 왼쪽에서 0px */
+  width: 100%;               /* 전체 너비 */
+  height: 100%;              /* 전체 높이 */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
+  display: flex;             /* 내부 요소 정렬을 위한 flex */
+  flex-direction: column;    /* 세로 방향으로 쌓음 */
+  justify-content: center;   /* 위아래 가운데 정렬 */
+  align-items: center;       /* 가로 가운데 정렬 */
+  text-align: center;        /* 텍스트 가운데 정렬 */
+  padding: 4rem 2rem;        /* 상하좌우 패딩 */
 }
 
+/* 큰 제목 텍스트 */
+.text-box h1 {
+  font-size: 3rem;           /* 제목 크기 */
+  font-weight: 900;          /* 매우 굵은 글씨 */
+  font-family: 'Jua', sans-serif; /* Google Fonts에서 불러온 'Jua' 사용 */
+  margin-bottom: 1.5rem;     /* 아래 여백 */
+}
+
+/* 소개 문단 텍스트 */
 .intro {
-  font-size: 1rem; /* 글씨 크기 = 16px */
-  line-height: 1.6; /* 줄 간격: 글자 크기의 1.6배 */
-  margin-bottom: 2rem; /* 아래 여백 32px */
-  color: #eee; /* 밝은 회색 글자색 */
+  font-size: 1rem;           /* 기본 텍스트 크기 */
+  line-height: 1.6;          /* 줄 간격 */
+  margin-bottom: 2rem;       /* 아래 여백 */
+  color: #eee;               /* 밝은 회색 글자색 */
 }
 
+/* 버튼 스타일 */
 .hero-btn {
   background-color: #ff5722; /* 주황색 배경 */
-  padding: 0.75rem 2rem; 
-  /* 위아래 0.75rem(12px), 좌우 2rem(32px) → 넉넉한 버튼 패딩 */
-  border-radius: 30px; /* 둥근 모서리 */
-  color: white; /* 글자색 흰색 */
-  text-decoration: none; /* 밑줄 제거 */
-  font-weight: bold; /* 굵은 글씨 */
-  transition: background-color 0.3s ease; /* 색이 부드럽게 변함 */
+  padding: 0.75rem 2rem;     /* 상하 0.75rem, 좌우 2rem */
+  border-radius: 30px;       /* 둥근 테두리 */
+  color: white;              /* 텍스트 색상 */
+  text-decoration: none;     /* 밑줄 제거 */
+  font-weight: bold;         /* 굵은 글씨 */
+  transition: background-color 0.3s ease; /* 마우스 호버 시 부드럽게 색상 전환 */
 }
 
+/* 버튼에 마우스 올렸을 때 */
 .hero-btn:hover {
-  background-color: #e64a19; /* 마우스를 올렸을 때 더 진한 주황으로 변경 */
+  background-color: #e64a19; /* 더 진한 주황색으로 변경 */
 }
 
+
+/* ===============================
+   About 섹션
+   =============================== */
 .about {
-  height: 100vh;
-  background-color: #f4f4f4;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
+  height: 100vh;              /* 화면 1개 크기만큼 높이 */
+  background-color: #f4f4f4;  /* 밝은 회색 배경 */
+  color: #333;                /* 진한 회색 글자 */
+  display: flex;              /* 내부 요소 정렬 */
+  justify-content: center;    /* 가로 가운데 정렬 */
+  align-items: center;        /* 세로 가운데 정렬 */
+  flex-direction: column;     /* 세로 정렬 */
+  padding: 2rem;              /* 전체 패딩 */
 }
 
 .about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;            /* 제목 크기 */
+  margin-bottom: 1rem;        /* 아래 여백 */
 }
 
 .about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 600px;
-  text-align: center;
+  font-size: 1.1rem;          /* 본문 텍스트 크기 */
+  line-height: 1.6;           /* 줄 간격 */
+  max-width: 600px;           /* 최대 너비 제한 */
+  text-align: center;         /* 가운데 정렬 */
 }

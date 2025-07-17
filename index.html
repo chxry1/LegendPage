@@ -10,7 +10,9 @@
 
   <link rel="stylesheet" href="styles.css" /> 
   <!-- 외부 CSS 파일(styles.css) 연결 -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- ✅ 추가된 글꼴 (Jua) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
@@ -24,11 +26,13 @@
     <!-- 우측 메뉴 아이콘 (햄버거 메뉴용) -->
   </header>
 
-  <!-- 메인 히어로(인트로) 섹션 -->
+  <!-- ✅ Hero 섹션: 이미지 + 텍스트 박스 구조로 수정 -->
   <section class="hero">
-    <div class="overlay">
-      <!-- 배경 이미지 위에 덮이는 반투명한 텍스트 박스 -->
+    <!-- ✅ 배경 이미지 삽입 (이전에는 CSS background-image였음) -->
+    <img src="images/background.jpg" alt="배경 이미지" class="hero-img" />
 
+    <!-- ✅ 이미지 위에 겹쳐질 텍스트 박스 -->
+    <div class="text-box">
       <h1>- 한상현 -<br />백엔드 개발자 포트폴리오</h1> 
       <!-- 큰 제목, <br />로 줄바꿈 -->
 
@@ -37,11 +41,18 @@
         안정성과 구조에 집중하는 백엔드 개발자<br />
         한상현입니다.
       </p> 
-      <!-- 자기소개 문단, <br />로 줄바꿈 -->
+      <!-- 자기소개 문단 -->
 
       <a href="#about" class="hero-btn">더 알아보기 ↓</a> 
-      <!-- 다음 섹션으로 이동하는 버튼 (id="about"으로 이동) -->
+      <!-- 아래 섹션으로 이동 버튼 -->
+    </div>
+  </section>
 
+  <!-- About 섹션 -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>저는 서버 아키텍처, 안정적인 API 설계, DB 최적화를 좋아하는 백엔드 개발자입니다.</p>
     </div>
   </section>
 </body>
