@@ -67,7 +67,7 @@ body, html {
   font-weight: 1500; /* 아주 굵은 글씨 */
   line-height: 1.5; /* 줄 간격: 글자 크기의 1.5배 */
   margin-bottom: 2rem; /* 아래쪽 여백 32px */
-  margin-top: 3rem;        /* ↑ 위쪽 여백: h1을 아래로 밀어내기 위해 추가 */
+  margin-top: 2rem;        /* ↑ 위쪽 여백: h1을 아래로 밀어내기 위해 추가 */
 }
 
 .intro {
