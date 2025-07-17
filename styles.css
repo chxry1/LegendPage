@@ -1,90 +1,92 @@
 /* 기본 리셋 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* 모든 요소의 바깥 여백 제거 */
+  padding: 0; /* 모든 요소의 안쪽 여백 제거 */
+  box-sizing: border-box; /* width 계산 시 padding, border 포함되도록 설정 */
 }
 
 body, html {
-  font-family: 'Pretendard', sans-serif;
-  color: #fff;
-  height: 100%;
+  font-family: 'Pretendard', sans-serif; /* 기본 글꼴을 Pretendard로 설정 (없으면 sans-serif) */
+  color: #fff; /* 전체 글자색 흰색 */
+  height: 100%; /* body와 html 높이를 전체 화면으로 설정 */
 }
 
 /* 네비게이션 바 */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed; /* 페이지 상단에 고정 */
+  top: 0; /* 화면 위에서 0px (완전히 상단에 붙음) */
+  width: 100%; /* 화면 전체 너비 */
+  padding: 1rem 2rem; /* 위아래 1rem(16px), 좌우 2rem(32px) */
+  background-color: white; /* 배경 흰색 */
+  display: flex; /* 내부 요소를 가로 정렬 */
+  justify-content: space-between; /* 좌우 요소(로고/메뉴 아이콘)를 양끝에 배치 */
+  align-items: center; /* 세로 가운데 정렬 */
+  z-index: 1000; /* 다른 요소보다 위에 보이도록 설정 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 아래쪽에 은은한 그림자 */
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #333;
+  font-weight: 700; /* 굵은 글씨 */
+  font-size: 1.2rem; /* 글자 크기 = 1.2 * 16px = 약 19.2px */
+  color: #333; /* 진한 회색 (글자색) */
 }
 
 .menu-icon {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.5rem; /* 아이콘 크기 = 1.5 * 16px = 24px */
+  color: #333; /* 진한 회색 */
 }
 
 /* Hero 영역 */
 .hero {
-  height: auto;
-  background-image: url('images/background.jpg'); /* 배경 이미지 경로 맞게 수정 */
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  position: relative;
+  height: 400px; /* hero 영역의 높이를 400px로 고정 (이미지 크기) */
+  background-image: url('images/background.jpg'); /* 배경 이미지 경로 */
+  background-size: cover; /* 이미지를 요소에 꽉 채우되 비율 유지 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  position: relative; /* 안쪽에 absolute 요소 기준 잡기 위해 설정 */
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
+  position: absolute; /* .hero 기준으로 절대 위치 */
+  top: 0; /* 위에서 0px */
+  left: 0; /* 왼쪽에서 0px */
+  width: 100%; /* .hero 전체 너비와 동일 */
+  height: 100%; /* .hero 전체 높이와 동일 */
+  background-color: rgba(0,0,0,0.5); /* 반투명 검은 배경 (50%) */
+  display: flex; /* 안의 텍스트/버튼 정렬을 위해 flex 사용 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  justify-content: flex-start; /* 위쪽에서부터 정렬 시작 */
+  align-items: center; /* 가운데 정렬 (가로 기준) */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  padding: 4rem 2rem 2rem 2rem; 
+  /* 상단 4rem(64px), 좌우 2rem(32px), 하단 2rem(32px) 
+     → 상단 여백이 더 커서 글씨들이 아래로 밀려 보임 */
 }
 
 .hero h1 {
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  font-size: 2rem; /* 제목 크기 = 2 * 16px = 32px */
+  font-weight: 900; /* 아주 굵은 글씨 */
+  line-height: 1.5; /* 줄 간격: 글자 크기의 1.5배 */
+  margin-bottom: 2rem; /* 아래쪽 여백 32px */
 }
 
 .intro {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #eee;
+  font-size: 1rem; /* 글씨 크기 = 16px */
+  line-height: 1.6; /* 줄 간격: 글자 크기의 1.6배 */
+  margin-bottom: 2rem; /* 아래 여백 32px */
+  color: #eee; /* 밝은 회색 글자색 */
 }
 
 .hero-btn {
-  background-color: #ff5722;
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  background-color: #ff5722; /* 주황색 배경 */
+  padding: 0.75rem 2rem; 
+  /* 위아래 0.75rem(12px), 좌우 2rem(32px) → 넉넉한 버튼 패딩 */
+  border-radius: 30px; /* 둥근 모서리 */
+  color: white; /* 글자색 흰색 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: bold; /* 굵은 글씨 */
+  transition: background-color 0.3s ease; /* 색이 부드럽게 변함 */
 }
 
 .hero-btn:hover {
-  background-color: #e64a19;
+  background-color: #e64a19; /* 마우스를 올렸을 때 더 진한 주황으로 변경 */
 }
