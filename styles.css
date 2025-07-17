@@ -63,7 +63,7 @@ body, html {
 }
 
 .hero h1 {
-  font-size: 4rem; /* 제목 크기 = 2 * 16px = 32px */
+  font-size: 3rem; /* 제목 크기 = 2 * 16px = 32px */
   font-weight: 1500; /* 아주 굵은 글씨 */
   line-height: 1.5; /* 줄 간격: 글자 크기의 1.5배 */
   margin-bottom: 1rem; /* 아래쪽 여백 32px */
