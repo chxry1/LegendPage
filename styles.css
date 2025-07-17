@@ -1,23 +1,84 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  padding: 40px;
+/* 기본 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+body, html {
+  font-family: 'Pretendard', sans-serif;
+  color: #fff;
+  height: 100%;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h1 {
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
   color: #333;
-  margin-bottom: 20px;
 }
 
-p {
+.menu-icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Hero 영역 */
+.hero {
+  height: 100vh;
+  background-image: url('images/background.jpg'); /* 배경 이미지 경로 맞게 수정 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* 어두운 오버레이 */
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+.hero-btn {
+  background-color: #ff5722;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e64a19;
 }
