@@ -66,14 +66,14 @@ body, html {
   font-size: 2rem; /* 제목 크기 = 2 * 16px = 32px */
   font-weight: 1500; /* 아주 굵은 글씨 */
   line-height: 1.5; /* 줄 간격: 글자 크기의 1.5배 */
-  margin-bottom: 2rem; /* 아래쪽 여백 32px */
+  margin-bottom: 1rem; /* 아래쪽 여백 32px */
   margin-top: 2rem;        /* ↑ 위쪽 여백: h1을 아래로 밀어내기 위해 추가 */
 }
 
 .intro {
   font-size: 1rem; /* 글씨 크기 = 16px */
   line-height: 1.6; /* 줄 간격: 글자 크기의 1.6배 */
-  margin-bottom: 3rem; /* 아래 여백 32px */
+  margin-bottom: 2rem; /* 아래 여백 32px */
   color: #eee; /* 밝은 회색 글자색 */
 }
 
