@@ -38,7 +38,7 @@ body, html {
 
 /* Hero 영역 */
 .hero {
-  height: 500px; /* hero 영역의 높이를 400px로 고정 (이미지 크기) */
+  height: 100vh; /* hero 영역의 높이를 400px로 고정 (이미지 크기) */
   background-image: url('images/background.jpg'); /* 배경 이미지 경로 */
   background-size: cover; /* 이미지를 요소에 꽉 채우되 비율 유지 */
   background-position: center; /* 이미지 가운데 정렬 */
