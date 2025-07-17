@@ -68,6 +68,7 @@ body, html {
   line-height: 1.5; /* 줄 간격: 글자 크기의 1.5배 */
   margin-bottom: 1rem; /* 아래쪽 여백 32px */
   margin-top: 2rem;        /* ↑ 위쪽 여백: h1을 아래로 밀어내기 위해 추가 */
+  font-family: 'Jua', sans-serif;
 }
 
 .intro {
