@@ -125,9 +125,9 @@ body, html {
 }
 
 .about hr {
-  width: 60px;
-  height: 3px;
-  background: #000;
+  width: 150px;
+  height: 1.5px;
+  background: #787272;
   margin: 0 auto 2rem;
   border: none;
 }
