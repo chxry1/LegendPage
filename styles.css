@@ -228,8 +228,10 @@ body, html {
 .skill-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  flex: 1; /* ✅ 이게 핵심! */
 }
+
 
 .skill-badge {
   display: inline-block;
