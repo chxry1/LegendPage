@@ -112,24 +112,55 @@ body, html {
    About 섹션
    =============================== */
 .about {
-  height: 100vh;              /* 화면 1개 크기만큼 높이 */
-  background-color: #f4f4f4;  /* 밝은 회색 배경 */
-  color: #333;                /* 진한 회색 글자 */
-  display: flex;              /* 내부 요소 정렬 */
-  justify-content: center;    /* 가로 가운데 정렬 */
-  align-items: center;        /* 세로 가운데 정렬 */
-  flex-direction: column;     /* 세로 정렬 */
-  padding: 2rem;              /* 전체 패딩 */
+  background-color: #fff;
+  color: #333;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .about h2 {
-  font-size: 2rem;            /* 제목 크기 */
-  margin-bottom: 1rem;        /* 아래 여백 */
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
 }
 
-.about p {
-  font-size: 1.1rem;          /* 본문 텍스트 크기 */
-  line-height: 1.6;           /* 줄 간격 */
-  max-width: 600px;           /* 최대 너비 제한 */
-  text-align: center;         /* 가운데 정렬 */
+.about hr {
+  width: 60px;
+  height: 3px;
+  background: #000;
+  margin: 0 auto 2rem;
+  border: none;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.about-left,
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 3px;
+}
+
+.info-text strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
 }
