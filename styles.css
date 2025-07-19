@@ -165,3 +165,93 @@ body, html {
   font-weight: bold;
   margin-bottom: 0.25rem;
 }
+
+/* ===============================
+   SKILLS 섹션
+   =============================== */
+.skills {
+  background-color: #f2c94c;       /* 전체 배경 노란색 */
+  padding: 4rem 2rem;              /* 위아래 4rem, 좌우 2rem 내부 여백 */
+  color: #333;                     /* 텍스트 색상 */
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.skills hr {
+  width: 150px;
+  height: 2px;
+  background: #333;
+  border: none;
+  margin: 0 auto 2rem;
+}
+
+.skills-grid {
+  background-color: #fff;          /* 내부 박스 흰색 */
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill-category {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.skill-category i {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+/* 색상 클래스들 */
+.skill-badge.blue { background-color: #4e7dd3; }
+.skill-badge.yellow { background-color: #f2c94c; color: #333; }
+.skill-badge.gray { background-color: #7f8c8d; }
+.skill-badge.black { background-color: #333; }
+.skill-badge.red { background-color: #e74c3c; }
+.skill-badge.navy { background-color: #34495e; }
+.skill-badge.pink { background-color: #e91e63; }
+.skill-badge.sky { background-color: #00bcd4; }
+.skill-badge.purple { background-color: #9b59b6; }
+.skill-badge.green { background-color: #27ae60; }
+.skill-badge.orange { background-color: #f39c12; }
+.skill-badge.teal { background-color: #1abc9c; }
+
+
