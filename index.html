@@ -1,111 +1,103 @@
 <!DOCTYPE html>
-<html lang="ko"> <!-- 문서의 언어 설정: 한국어 -->
+<html lang="ko">
 
 <head>
-  <meta charset="UTF-8" /> <!-- 문자 인코딩: UTF-8 설정 (한글 포함) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-  <!-- 모바일에서도 잘 보이도록 화면 너비 설정 -->
-  
-  <title>한상현 포트폴리오</title> <!-- 탭에 표시될 제목 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>한상현 포트폴리오</title>
 
-  <link rel="stylesheet" href="styles.css" /> 
-  <!-- 외부 CSS 파일(styles.css) 연결 -->
+  <!-- 스타일 -->
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- ✅ 추가된 글꼴 (Jua) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Jua (Hero 제목용) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
+  <!-- 아이콘 폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
-  <!-- 상단 네비게이션 영역 -->
+
+  <!-- 네비게이션 바 -->
   <header class="navbar">
-    <div class="logo">HSH's Portfolio</div> 
-    <!-- 좌측 로고 텍스트 -->
-    <div class="menu-icon">☰</div> 
-    <!-- 우측 메뉴 아이콘 (햄버거 메뉴용) -->
+    <div class="logo">HSH's Portfolio</div>
+    <div class="menu-icon">☰</div>
   </header>
 
-  <!-- ✅ Hero 섹션: 이미지 + 텍스트 박스 구조로 수정 -->
+  <!-- Hero 섹션 -->
   <section class="hero">
-    <!-- ✅ 배경 이미지 삽입 (이전에는 CSS background-image였음) -->
     <img src="images/background.jpg" alt="배경 이미지" class="hero-img" />
-
-    <!-- ✅ 이미지 위에 겹쳐질 텍스트 박스 -->
     <div class="text-box">
-      <h1>- 한상현 -<br />백엔드 개발자 포트폴리오</h1> 
-      <!-- 큰 제목, <br />로 줄바꿈 -->
-
+      <h1>- 한상현 -<br />백엔드 개발자 포트폴리오</h1>
       <p class="intro">
         안녕하세요.<br />
         안정성과 구조에 집중하는 백엔드 개발자<br />
         한상현입니다.
-      </p> 
-      <!-- 자기소개 문단 -->
-
-      <a href="#about" class="hero-btn">더 알아보기 ↓</a> 
-      <!-- 아래 섹션으로 이동 버튼 -->
+      </p>
+      <a href="#about" class="hero-btn">더 알아보기 ↓</a>
     </div>
   </section>
 
-  <!-- About 섹션 (2단 레이아웃) -->
-<section class="about" id="about">
-  <h2><i class="fas fa-link"></i> ABOUT ME</h2>
-  <hr />
-  <div class="about-grid">
-    <!-- 왼쪽 열 -->
-    <div class="about-left">
-      <div class="info-item">
-        <i class="fas fa-user"></i>
-        <div class="info-text">
-          <strong>이름</strong>
-          <p>한상현</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <div class="info-text">
-          <strong>위치</strong>
-          <p>서울특별시 강남구</p>
-        </div>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-envelope"></i>
-        <div class="info-text">
-          <strong>이메일</strong>
-          <p>xhtmrka1@gmail.com</p>
-        </div>
-      </div>
-    </div>
+  <!-- About 섹션 -->
+  <section class="about" id="about">
+    <h2><i class="fas fa-link"></i> ABOUT ME</h2>
+    <hr />
+    <div class="about-grid">
 
-    <!-- 오른쪽 열 -->
-    <div class="about-right">
-      <div class="info-item">
-        <i class="fas fa-calendar-alt"></i>
-        <div class="info-text">
-          <strong>생년월일</strong>
-          <p>03.09.29</p>
+      <!-- 왼쪽 열 -->
+      <div class="about-left">
+        <div class="info-item">
+          <i class="fas fa-user"></i>
+          <div class="info-text">
+            <strong>이름</strong>
+            <p>한상현</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="info-text">
+            <strong>위치</strong>
+            <p>서울특별시 강남구</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div class="info-text">
+            <strong>이메일</strong>
+            <p>xhtmrka1@gmail.com</p>
+          </div>
         </div>
       </div>
-      <div class="info-item">
-        <i class="fas fa-phone"></i>
-        <div class="info-text">
-          <strong>연락처</strong>
-          <p>010-1234-5678</p>
+
+      <!-- 오른쪽 열 -->
+      <div class="about-right">
+        <div class="info-item">
+          <i class="fas fa-calendar-alt"></i>
+          <div class="info-text">
+            <strong>생년월일</strong>
+            <p>03.09.29</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div class="info-text">
+            <strong>연락처</strong>
+            <p>010-1234-5678</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-graduation-cap"></i>
+          <div class="info-text">
+            <strong>학력</strong>
+            <p>서울대학교<br />(컴퓨터공학부)</p>
+          </div>
         </div>
       </div>
-      <div class="info-item">
-        <i class="fas fa-graduation-cap"></i>
-        <div class="info-text">
-          <strong>학력</strong>
-          <p>서울대학교<br>(컴퓨터공학부)</p>
-        </div>
-      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
 </body>
 
